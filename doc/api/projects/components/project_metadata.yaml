@@ -1,0 +1,45 @@
+type: object
+properties:
+  id:
+    type: string
+    example: MjA
+  createdAt:
+    type: string
+    format: date-time
+  updatedAt:
+    type: string
+    format: date-time
+  name:
+    type: string
+  type:
+    type: string
+    enum:
+      - grid
+      - loom
+      - brick
+      - peyote
+  backgroundColor:
+    type: string
+    format: hex
+    example: "#ffffff"
+    description: Колір в шістнадцятковому форматі та гештеґом
+  preview:
+    type: object
+    properties:
+      id:
+        type: string
+        example: MjA
+      url:
+        type: string
+        format: uri
+    required:
+      - id
+      - url
+required:
+  - id
+  - createdAt
+  - updatedAt
+  - name
+  - type
+  - backgroundColor
+  - preview
